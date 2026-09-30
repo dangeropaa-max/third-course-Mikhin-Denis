@@ -1,0 +1,32 @@
+<!DOCTYPE hmtl>
+<html lang="ru">
+    <head>
+        <meta charset = "UTF-8">
+        <title>ЦДА</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>ЦДА</h1>
+
+        <div class="controls"> 
+            <label>x1:<input id="x1" type="number" value="2"> </label>
+            <label>y1:<input id="y1" type="number" value="2"></label>
+            <label>x2:<input id="x2" type="number" value="20"></label>
+            <label>y2:<input id="y2" type="number" value="8"></label>
+            <button id="build">Построить</button>
+        </div>
+
+        <canvas id="canvas" width="600" height="400"></canvas>
+
+        <h2>Таблицы шагов</h2>
+        <table id="stepsTable">
+            <thead>
+                    <th>Шаг</th><th>x до окр.</th><th>y до окр.</th>
+                    <th>пиксель x</th><th>пиксель y</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="scripts.js"></script>
+    </body>
+
+</html>

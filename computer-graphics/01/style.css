@@ -1,0 +1,39 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 20px;
+    background: #fafafa;
+ }
+
+ .controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+ }
+
+ .controls input {
+    width: 60px;
+ }
+
+ canvas{
+    border: 1px solid #333;
+    display: block;
+    margin-bottom: 20px;
+ }
+
+ table {
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 14px;
+ }
+
+ th, td {
+    border: 1px solid #aaa;
+    padding: 4px 10px;
+    text-align:center;
+ }
+
+ th{
+    background:#eaeaea;
+ }
