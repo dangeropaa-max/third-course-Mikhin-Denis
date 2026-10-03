@@ -1,0 +1,36 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+input, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.error {
+  color: crimson;
+  min-height: 1.2em;
+}
+
+#numbers-list li {
+  padding: 0.2rem 0;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+}
+
+.stats li {
+  padding: 0.2rem 0;
+}
