@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>2 lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ЦДА и Брезенхем</h1>
+
+    <div class="controls">
+        <label>x1:<input id="x1" type="number" value="2"></label>
+        <label>y1:<input id="y1" type="number" value="2"></label>
+        <label>x2:<input id="x2" type="number" value="20"></label>
+        <label>y2:<input id="y2" type="number" value="8"></label>
+
+        <label>Алгоритм:
+            <select id="algo">
+                <option value="dda">ЦДА</option>
+                <option value="bresenham" selected>Брезенхем</option>
+                <option value="both">Оба</option>
+            </select>
+        </label>
+
+        <label>
+            <input id="showCoords" type="checkbox" checked>
+            Показать координаты
+        </label>
+
+        <button id="build">Построить</button>
+        <button id="benchmark">Замер скорости</button>
+    </div>
+
+    <canvas id="canvas" width="600" height="400"></canvas>
+
+    <div class="panels">
+        <h2>Таблица Брезенхема</h2>
+        <table id="stepsTable">
+            <thead>
+                <tr>
+                    <th>Шаг</th><th>x</th><th>y</th>
+                    <th>error</th><th>error2</th>
+                    <th>dx</th><th>dy</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div>
+            <h2>Пиксели ЦДА</h2>
+            <ol id="ddaList"></ol>
+        </div>
+
+        <div>
+            <h2>Пиксели Брезенхема</h2>
+            <ol id="bresList"></ol>
+        </div>
+
+        <div id="benchmarkResult"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
