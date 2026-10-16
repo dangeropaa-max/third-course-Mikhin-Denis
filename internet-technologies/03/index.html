@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог пользователей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Каталог пользователей</h1>
+        <p class="subtitle">Данные загружаются из JSONPlaceholder API</p>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <button id="load-btn" class="btn btn-primary">Загрузить</button>
+            <button id="reload-btn" class="btn btn-secondary" disabled>Обновить</button>
+
+            <input
+                type="search"
+                id="filter-input"
+                class="filter-input"
+                placeholder="Поиск по имени, username или email..."
+                disabled>
+        </section>
+
+        <section id="status" class="status"></section>
+        <section id="users-list" class="users-list"></section>
+        <section id="stats" class="stats"></section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+    <meta charset ="UTF-8">
+    <title>Окружность</title>
+    <link rel = "stylesheet" href = "style.css">
+    </head>
+
+    <body> 
+        <h1>Алгоритм средней точки для окружности</h1>
+
+        <div class = "controls">
+            <label>cx:<input id ="cx" type = "number" value = "20"></label>
+            <label>cy: <input id = "cy" type = "number" value = "15"></label>
+            <label>r:<input id= "r" type = "number" value ="5"></label>
+
+            <label>
+                Метод:
+                <select id = "method">
+                    <option value = "midpoint" selected>>Средней точки</option>
+                    <option value ="formula">Формула</option>
+                    <option value = "both">Оба</option>
+                </select>
+            </label>
+
+            <label>
+                <input id = "highlight" type = "checkbox">
+                Подсветить один шаг
+            </label>
+
+            <button id = "build">Построить</button>
+            <button id = "benchmark">Замер скорости</button>
+
+        </div>
+
+        <canvas id ="canvas" width = "600" height = "400"></canvas>
+        <div class = "panels">
+            <div>
+                <h2>Таблица шагов</h2>
+                <table id = "stepsTable">
+                    <thead>
+                        <tr>
+                            <th>Шаг</th><th>Х</th><th>Y</th>
+                            <th>d до</th><th>Решение</th><th>d после</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div>
+            <h2>Симметричные точки шага</h2>
+            <ol id = "symList"></ol>
+        </div>
+
+        <script src = "app.js"></script>
+
+    </body>
+
+</html>
