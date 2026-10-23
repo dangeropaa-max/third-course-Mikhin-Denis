@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Занятие 4. Отсечение (Коэн–Сазерленд)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Отсечение отрезков: Коэн–Сазерленд</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Окно</legend>
+      <label>xmin: <input id="xmin" type="number" value="5"></label>
+      <label>ymin: <input id="ymin" type="number" value="5"></label>
+      <label>xmax: <input id="xmax" type="number" value="25"></label>
+      <label>ymax: <input id="ymax" type="number" value="20"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Отрезок</legend>
+      <label>x1: <input id="x1" type="number" value="2"></label>
+      <label>y1: <input id="y1" type="number" value="2"></label>
+      <label>x2: <input id="x2" type="number" value="30"></label>
+      <label>y2: <input id="y2" type="number" value="25"></label>
+    </fieldset>
+
+    <button id="build">Отсечь</button>
+    <button id="polyline">Ломаная</button>
+    <button id="randomTest">Случайные отрезки</button>
+  </div>
+
+  <canvas id="canvas" width="600" height="400"></canvas>
+
+  <div class="panels">
+    <div>
+      <h2>Коды концов</h2>
+      <div id="codes"></div>
+    </div>
+    <div>
+      <h2>Итерации</h2>
+      <table id="stepsTable">
+        <thead>
+          <tr>
+            <th>шаг</th><th>A</th><th>codeA</th>
+            <th>B</th><th>codeB</th><th>действие</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="randomResult"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
