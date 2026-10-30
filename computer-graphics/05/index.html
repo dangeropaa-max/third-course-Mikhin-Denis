@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Заполнение областей</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Flood Fill и Scanline Fill</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Многоугольник</legend>
+      <select id="shape">
+        <option value="rect">Прямоугольник</option>
+        <option value="triangle">Треугольник</option>
+        <option value="convex">Выпуклый (5 вершин)</option>
+        <option value="concave" selected>Невыпуклый</option>
+        <option value="open">Незамкнутый</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Заливка</legend>
+      <button id="floodBtn">Flood Fill</button>
+      <button id="scanBtn">Scanline Fill</button>
+      <button id="clearBtn">Очистить</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Пошаговый режим</legend>
+      <label>
+        Шаг: <input id="stepSlider" type="range" min="0" max="100" value="100">
+      </label>
+      <span id="stepLabel"></span>
+    </fieldset>
+  </div>
+
+  <canvas id="canvas" width="600" height="400"></canvas>
+
+  <div class="panels">
+    <div>
+      <h2>Таблица строки (scanline)</h2>
+      <label>y: <input id="scanY" type="number" value="15"></label>
+      <button id="showRow">Показать</button>
+      <pre id="rowTable"></pre>
+    </div>
+    <div id="stats"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

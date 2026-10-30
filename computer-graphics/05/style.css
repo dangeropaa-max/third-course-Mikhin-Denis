@@ -1,0 +1,40 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 20px;
+  background: #fafafa;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+button { padding: 6px 12px; cursor: pointer; margin-right: 4px; }
+
+canvas {
+  border: 1px solid #333;
+  display: block;
+  margin-bottom: 20px;
+  background: #f0f0f0;
+}
+
+.panels { display: flex; gap: 30px; flex-wrap: wrap; }
+
+pre {
+  background: #eee;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+#stats { font-family: monospace; font-size: 14px; }
