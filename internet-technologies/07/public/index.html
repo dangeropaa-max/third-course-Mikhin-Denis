@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои книги</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Мои книги</h1>
+        <p class="subtitle">Данные из SQLite через собственный API</p>
+    </header>
+
+    <main class="container">
+
+        
+        <section class="form-section">
+            <h2>Добавить книгу</h2>
+            <form id="book-form" novalidate>
+                <label class="field">
+                    <span>Название</span>
+                    <input type="text" id="title-input" placeholder="Например: Мастер и Маргарита" autocomplete="off">
+                </label>
+                <label class="field">
+                    <span>Автор</span>
+                    <input type="text" id="author-input" placeholder="Например: Булгаков" autocomplete="off">
+                </label>
+                <label class="field">
+                    <span>Год</span>
+                    <input type="number" id="year-input" placeholder="1967">
+                </label>
+                <p id="form-error" class="form-error"></p>
+                <button type="submit" class="btn btn-primary">Добавить</button>
+            </form>
+        </section>
+
+       
+        <section class="controls">
+            <button id="reload-btn" class="btn btn-secondary">Обновить список</button>
+            <span id="status" class="status"></span>
+        </section>
+
+        
+        <section id="books-list" class="books-list"></section>
+
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>

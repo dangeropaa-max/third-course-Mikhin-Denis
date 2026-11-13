@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Занятие 7. Геометрические преобразования</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Геометрические преобразования</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Перенос</legend>
+      <label>tx: <input id="tx" type="number" value="0"></label>
+      <label>ty: <input id="ty" type="number" value="0"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Масштаб</legend>
+      <label>sx: <input id="sx" type="number" value="1" step="0.1"></label>
+      <label>sy: <input id="sy" type="number" value="1" step="0.1"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Поворот</legend>
+      <label>угол: <input id="angle" type="number" value="0"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Центр</legend>
+      <label>cx: <input id="cx" type="number" value="0"></label>
+      <label>cy: <input id="cy" type="number" value="0"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Порядок</legend>
+      <label>
+        <select id="order">
+          <option value="TR">T · R (сначала поворот)</option>
+          <option value="RT">R · T (сначала перенос)</option>
+          <option value="RS">R · S (поворот и масштаб вокруг C)</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <button id="apply">Применить</button>
+    <button id="reset">Сброс</button>
+    <button id="clearPoly">Очистить фигуру</button>
+  </div>
+
+  <canvas id="canvas" width="600" height="400"></canvas>
+
+  <div class="panels">
+    <div>
+      <h2>Таблица вершин</h2>
+      <table id="verticesTable">
+        <thead>
+          <tr>
+            <th>Вершина</th><th>x исх.</th><th>y исх.</th>
+            <th>x новый</th><th>y новый</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div>
+      <h2>Итоговая матрица</h2>
+      <pre id="matrixOut"></pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
